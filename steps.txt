@@ -1,0 +1,23 @@
+Step by Step guide: https://microsoft.github.io/TechExcel-Integrating-Azure-PaaS-and-AI-Services-for-AI-Design-Wins/docs/01_deploy_app_resources/01_01.html
+
+1. 01: Fork the repository
+Fork this GitHub repository to your account. You will need to fork the repo in order to modify and use GitHub Actions workflows in later tasks.
+
+2. Create a new virtual env
+python -m venv aidw-gtm
+
+3. activate the virtual env
+aidw-gtm\Scripts\activate.bat
+
+4. install python dependencies
+navigate to the src/ContosoSuitesDashboard folder and execute the command pip install -r requirements.txt
+
+5. To create a resource group using az cli, use the command az group create. 
+An example of this is: 
+az login
+az group create -l eastus2 -n aidw-gtm
+which will create a resource group named TechExcelTest in the East US 2 region.
+
+6. Changed password before bicep deployment:
+src\InfrastructureAsCode\DeployAzureResources.bicep
+
